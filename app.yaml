@@ -1,0 +1,24 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /
+  static_files: dist/thamiz-valarchi-viruthugal/index.html
+  upload: dist/thamiz-valarchi-viruthugal/index.html
+- url: /
+  static_dir: dist/thamiz-valarchi-viruthugal
+  # Temporary setting to keep gcloud from uploading not required files for deployment
+skip_files:
+- ^node_modules$
+- ^app\.yaml
+- ^README\..*
+- \.gitignore
+- ^\.git$
+- ^grunt\.js
+- ^src$
+- ^e2e$
+- \.editorconfig
+- ^karma\.config\.js
+- ^package\.json
+- ^protractor\.conf\.js
+- ^tslint\.json
